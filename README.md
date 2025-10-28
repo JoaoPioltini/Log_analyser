@@ -1,4 +1,4 @@
-# � Log Analyzer (Sequential and Parallel Versions)
+#  Log Analyzer (Sequential and Parallel Versions)
 
 ##  Overview
 This project implements a **HTTP log analyzer** that processes an access log file and extracts:
