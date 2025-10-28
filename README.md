@@ -1,6 +1,6 @@
-# 🧠 Log Analyzer (Sequential and Parallel Versions)
+# � Log Analyzer (Sequential and Parallel Versions)
 
-## 📘 Overview
+##  Overview
 This project implements a **HTTP log analyzer** that processes an access log file and extracts:
 - The total number of requests that returned **HTTP 404 (Not Found)**.
 - The total number of **bytes transferred** in responses with **HTTP 200 (OK)**.
@@ -11,7 +11,7 @@ Two versions were developed:
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 Both programs load the entire log file into memory and process it line by line.
 
 Each line of the log is parsed to extract the HTTP **status code** and **response size** (in bytes).  
@@ -19,7 +19,7 @@ The algorithms then:
 1. Count all responses with status `404`.
 2. Sum the bytes from responses with status `200`.
 
-### 🧵 Parallel Version
+###  Parallel Version
 The parallel implementation follows a **data decomposition** model:
 1. The vector of log lines is split into *N* chunks (one per thread).
 2. Each thread processes its own chunk independently.
@@ -30,7 +30,7 @@ This model allows scalable performance with different thread counts and file siz
 
 ---
 
-## 📊 Performance Example
+##  Performance Example
 | Threads | Execution Time (s) | Speedup | Efficiency |
 |----------|--------------------|----------|-------------|
 | 1 | 0.0774 | 1.00 | 100% |
@@ -44,7 +44,7 @@ Beyond that, synchronization overhead and Amdahl’s Law limit performance gains
 
 ---
 
-## 🧩 Files
+##  Files
 | File | Description |
 |------|--------------|
 | `log_analyser_seq.c` | Sequential implementation. |
@@ -55,7 +55,7 @@ Beyond that, synchronization overhead and Amdahl’s Law limit performance gains
 
 ---
 
-## 🧱 Compilation
+##  Compilation
 Run the provided **makefile**:
 
 ```bash
